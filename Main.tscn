@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://beodowkgaivio"]
+
+[ext_resource type="Texture2D" uid="uid://dxrd5yhidlfq3" path="res://icon.svg" id="1_fjy17"]
+[ext_resource type="Script" path="res://Player.cs" id="2_p420p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65p4b"]
+size = Vector2(118, 118)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_p420p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-1, 2)
+shape = SubResource("RectangleShape2D_65p4b")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_fjy17")
